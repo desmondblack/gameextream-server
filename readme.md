@@ -3,7 +3,7 @@ Examples of the code:
 
 Command used to warn player. If him to have 3 warns, player get a ban for 3 days.
 
-```	if(strcmp(cmd, "/warn", true) == 0)
+```C#	if(strcmp(cmd, "/warn", true) == 0)
 	{
 		if(PlayerInfo[playerid][pAdmin] < 1) return true;
 		if(PlayerInfo[playerid][pAdmin] < 5) return SendFormatMessage(playerid, COLOR_GREY, "{F70000}x {AFAFAF}Ваш уровень администратора: %d. Команда доступна с 5!", PlayerInfo[playerid][pAdmin]);
@@ -154,7 +154,7 @@ Admin may check banned players:
 		return true;
 	}
 ```	
-Banlist used public crearedacc:
+Command /banlist used public crearedacc and process mysql query:
 ```
 	case 12: 
 		{
