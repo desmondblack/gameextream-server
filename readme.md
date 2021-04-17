@@ -19,7 +19,6 @@ Examples of the code:
 		PlayerWarn(para1,PlayerInfo[playerid][pNick],result);
 		return true;
 	}
-  //
   stock PlayerWarn(playerid,admin[],result[],text[]=0)
 {
 	new string[128];
