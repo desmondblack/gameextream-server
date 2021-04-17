@@ -21,7 +21,7 @@ Command used to warn player. If him to have 3 warns, player get a ban for 3 days
 	}
 ```
 Stock process the command:
-```
+```C
   stock PlayerWarn(playerid,admin[],result[],text[]=0)
 {
 	new string[128];
@@ -58,7 +58,7 @@ Stock process the command:
 }
 ```
 If player has 3 warns:
-```
+```C
 stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 {
 	if(logged[playerid] == -6) return true;
@@ -142,7 +142,7 @@ stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 }
 ```
 Admin may check banned players:
-```
+```C
 	if(strcmp(cmd,"/banlist",true) == 0)
 	{
 		if(PlayerInfo[playerid][pAdmin] < 1) return true;
@@ -155,7 +155,7 @@ Admin may check banned players:
 	}
 ```	
 Command /banlist used public crearedacc and process mysql query:
-```
+```C
 	case 12: 
 		{
 			if(!rows) return SendFormatMessage(playerid,COLOR_GREY,"{F70000}x {AFAFAF}Аккаунт с именем %s не найден в базе данных!",params);
