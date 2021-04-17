@@ -3,7 +3,7 @@ Examples of the code:
 
 //command used to warn player. If him to have 3 warns, player get a ban for 3 days.
 
-	if(strcmp(cmd, "/warn", true) == 0)
+```	if(strcmp(cmd, "/warn", true) == 0)
 	{
 		if(PlayerInfo[playerid][pAdmin] < 1) return true;
 		if(PlayerInfo[playerid][pAdmin] < 5) return SendFormatMessage(playerid, COLOR_GREY, "{F70000}x {AFAFAF}Ваш уровень администратора: %d. Команда доступна с 5!", PlayerInfo[playerid][pAdmin]);
@@ -19,6 +19,9 @@ Examples of the code:
 		PlayerWarn(para1,PlayerInfo[playerid][pNick],result);
 		return true;
 	}
+```
+
+```
   stock PlayerWarn(playerid,admin[],result[],text[]=0)
 {
 	new string[128];
@@ -53,6 +56,8 @@ Examples of the code:
 	}
 	return true;
 }
+```
+```
 stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 {
 	if(logged[playerid] == -6) return true;
@@ -134,14 +139,9 @@ stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 	KickAC(playerid);
 	return true;
 }
-
-
-
-//-----------------------------------------------------------------------------------------------------------------------------------------//
-
-
-
-// check banned players
+```
+check banned players
+```
 	if(strcmp(cmd,"/banlist",true) == 0)
 	{
 		if(PlayerInfo[playerid][pAdmin] < 1) return true;
@@ -152,7 +152,9 @@ stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 		mysql_function_query(base,asd, true, "createdacc","dsd", playerid, tmp, 12);
 		return true;
 	}
-  //banlist used public crearedacc:
+```	
+banlist used public crearedacc:
+```
 	case 12: 
 		{
 			if(!rows) return SendFormatMessage(playerid,COLOR_GREY,"{F70000}x {AFAFAF}Аккаунт с именем %s не найден в базе данных!",params);
@@ -173,3 +175,4 @@ stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 			SendFormatMessage(playerid, COLOR_LIGHTRED2, "До окончании бана осталось: {FFFFFF}%s",convert(1,cache_get_field_content_int(0, "Unbantime", base)-gettime()));
 			SendClientMessage(playerid, COLOR_LIGHTRED2, "|______________________________________________________________|");
 		}
+```		
