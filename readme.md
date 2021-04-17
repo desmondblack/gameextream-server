@@ -1,7 +1,7 @@
 This is my SA:MP server project writed on PAWN. Project writen from 0. Now him estimated 89k lines. 
 Examples of the code:
 
-//command used to warn player. If him to have 3 warns, player get a ban for 3 days.
+Command used to warn player. If him to have 3 warns, player get a ban for 3 days.
 
 ```	if(strcmp(cmd, "/warn", true) == 0)
 	{
@@ -20,7 +20,7 @@ Examples of the code:
 		return true;
 	}
 ```
-
+Stock process the command:
 ```
   stock PlayerWarn(playerid,admin[],result[],text[]=0)
 {
@@ -57,6 +57,7 @@ Examples of the code:
 	return true;
 }
 ```
+If player has 3 warns:
 ```
 stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 {
@@ -140,7 +141,7 @@ stock AddBan(playerid, zabanil[], skill, days, reason[], result[])
 	return true;
 }
 ```
-check banned players
+Admin may check banned players:
 ```
 	if(strcmp(cmd,"/banlist",true) == 0)
 	{
@@ -153,7 +154,7 @@ check banned players
 		return true;
 	}
 ```	
-banlist used public crearedacc:
+Banlist used public crearedacc:
 ```
 	case 12: 
 		{
